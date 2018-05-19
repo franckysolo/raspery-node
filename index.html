@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IOT</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+  <body>
+    <div class="container">
+      <h1 class="m-5">IOT - Connection au serveur de données des capteurs</h1>
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">
+              Température
+            </div>
+            <div class="card-body text-center">
+              <span class="display-4" id="temperature"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">
+              Humidité
+            </div>
+            <div class="card-body text-center">
+              <span class="display-4" id="humidity"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    $(function () {
+      var socket = io();
+      socket.on("sensors::data", data => {
+        $('#temperature').html(data.temperature)
+        $('#humidity').html(data.humidity)
+      });
+    })
+    </script>
+  </body>
+</html>
