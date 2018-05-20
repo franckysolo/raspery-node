@@ -1,7 +1,7 @@
 {
-  "name": "raspery-node",
+  "name": "raspberry-node",
   "version": "1.0.0",
-  "description": "Node server API Rest Json for Raspery-pi and Arduino with sensors",
+  "description": "Node server API Rest Json for Raspberry-pi and Arduino with sensors",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,16 +10,16 @@
   "author": "franckysolo <franckysolo@gmail.com>",
   "license": "MIT",
   "repository": {
-     "type": "git",
-     "url": "git+https://github.com/franckysolo/raspery-node.git"
+    "type": "git",
+    "url": "git+https://github.com/franckysolo/raspberry-node.git"
   },
   "bugs": {
-    "url": "https://github.com/franckysolo/raspery-node/issues"
+    "url": "https://github.com/franckysolo/raspberry-node/issues"
   },
   "keywords": [
     "Node",
     "Arduino",
-    "Rasperypi"
+    "Raspberrypi"
   ],
   "dependencies": {
     "axios": "^0.18.0",
