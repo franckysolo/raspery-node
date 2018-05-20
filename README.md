@@ -21,3 +21,7 @@ A client connect to the rest api via socket and display live sensor data
 * Start the server from the raspberry with the command `node server.js` or `npm start`
 * Start the client from your local machine
 * You should see the sensor datas display on the client html page
+
+## Screenshot
+
+![Screen shot F](screen-shot.png)
